@@ -1,0 +1,171 @@
+{
+  "label": "after",
+  "url": "http://127.0.0.1:4187",
+  "mode": "matched-pose",
+  "browser": "155.0.8059.40",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "recordedAt": "2026-10-09T10:09:05.120Z",
+  "screenshots": [
+    {
+      "name": "desktop-8s-matched-pose",
+      "path": "desktop-8s-matched-pose.png",
+      "viewport": {
+        "width": 1512,
+        "height": 982
+      },
+      "fixedCamera": true,
+      "count": 850,
+      "paused": false,
+      "time": 7.999999999999977,
+      "steps": 480,
+      "seed": 42,
+      "finite": true,
+      "minY": 7.291019439697266,
+      "maxY": 18.132116317749023,
+      "maxX": 19.535247802734375,
+      "maxZ": 21.753908157348633,
+      "minSpeed": 2.6106928805182306,
+      "maxSpeed": 3.7518718092350998,
+      "averageNeighbors": 0,
+      "maxCandidates": 0,
+      "maxTurn": 0,
+      "cohesion": 1,
+      "separation": 1,
+      "fps": 0,
+      "simulationMs": 0,
+      "drawCalls": 12,
+      "triangles": 524630,
+      "firstPosition": [
+        15.290772438049316,
+        14.26431655883789,
+        7.735676288604736
+      ],
+      "firstVelocity": [
+        2.7385215759277344,
+        -0.055137839168310165,
+        1.9553128480911255
+      ],
+      "firstMatrix": [
+        0.617351770401001,
+        -0.012429861351847649,
+        0.4407910704612732,
+        0,
+        0.010115946643054485,
+        0.7585644721984863,
+        0.007222816813737154,
+        0,
+        -0.44085025787353516,
+        1.3160762010254503e-18,
+        0.6174346804618835,
+        0,
+        15.290772438049316,
+        14.26431655883789,
+        7.735676288604736,
+        1
+      ],
+      "camera": [
+        24,
+        16.5,
+        34
+      ],
+      "droppedTime": 0,
+      "cameraTarget": [
+        0,
+        10.5,
+        0
+      ],
+      "verticalFov": 48,
+      "viewOffsetY": 0,
+      "pixelRatio": 1,
+      "proceduralReflections": true,
+      "visibleFish": 850,
+      "meanScreenX": 0.018956332067176826,
+      "meanScreenY": -0.03637228896601471
+    },
+    {
+      "name": "mobile-8s-matched-pose",
+      "path": "mobile-8s-matched-pose.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fixedCamera": true,
+      "count": 850,
+      "paused": false,
+      "time": 7.999999999999977,
+      "steps": 480,
+      "seed": 42,
+      "finite": true,
+      "minY": 7.291019439697266,
+      "maxY": 18.132116317749023,
+      "maxX": 19.535247802734375,
+      "maxZ": 21.753908157348633,
+      "minSpeed": 2.6106928805182306,
+      "maxSpeed": 3.7518718092350998,
+      "averageNeighbors": 0,
+      "maxCandidates": 0,
+      "maxTurn": 0,
+      "cohesion": 1,
+      "separation": 1,
+      "fps": 0,
+      "simulationMs": 0,
+      "drawCalls": 12,
+      "triangles": 524630,
+      "firstPosition": [
+        15.290772438049316,
+        14.26431655883789,
+        7.735676288604736
+      ],
+      "firstVelocity": [
+        2.7385215759277344,
+        -0.055137839168310165,
+        1.9553128480911255
+      ],
+      "firstMatrix": [
+        0.617351770401001,
+        -0.012429861351847649,
+        0.4407910704612732,
+        0,
+        0.010115946643054485,
+        0.7585644721984863,
+        0.007222816813737154,
+        0,
+        -0.44085025787353516,
+        1.3160762010254503e-18,
+        0.6174346804618835,
+        0,
+        15.290772438049316,
+        14.26431655883789,
+        7.735676288604736,
+        1
+      ],
+      "camera": [
+        24,
+        16.5,
+        34
+      ],
+      "droppedTime": 0,
+      "cameraTarget": [
+        0,
+        10.5,
+        0
+      ],
+      "verticalFov": 76.45281042649613,
+      "viewOffsetY": 0,
+      "pixelRatio": 1,
+      "proceduralReflections": true,
+      "visibleFish": 768,
+      "meanScreenX": 0.03570358948608701,
+      "meanScreenY": -0.020559382303543233
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "baselineRevision": "7f067a5",
+  "webgl": {
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Pro, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)"
+  }
+}

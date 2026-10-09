@@ -129,3 +129,70 @@ test("fixed integration is frame-rate independent and bounds slow-frame work", (
   assert.throws(() => a.step(1), RangeError);
   assert.throws(() => a.reset(2001), RangeError);
 });
+
+test("seeded starting groups occupy three-dimensional volumes and scale density with population", () => {
+  const small = new School(200, 42), dense = new School(2000, 42);
+  const densityRatio = Math.cbrt(10);
+  let central = 0, upper = 0;
+  for (let i = 0; i < small.count; i++) {
+    const k = i * 3, group = i % 3;
+    const center = [(group - 1) * 7, 11 + group * 0.65, (group - 1) * -3];
+    for (let axis = 0; axis < 3; axis++) {
+      assert.ok(Math.abs((small.positions[k + axis] - center[axis]) * densityRatio - (dense.positions[k + axis] - center[axis])) < 2e-6);
+    }
+  }
+  const scale = Math.cbrt(dense.count / 850);
+  for (let i = 0; i < dense.count; i++) {
+    const k = i * 3, group = i % 3;
+    const x = (dense.positions[k] - (group - 1) * 7) / (7 * scale);
+    const y = (dense.positions[k + 1] - 11 - group * 0.65) / (4.4 * scale);
+    const z = (dense.positions[k + 2] - (group - 1) * -3) / (5.7 * scale);
+    assert.ok(x * x + y * y + z * z <= 1.000001);
+    if (Math.abs(y) < 0.3) central++;
+    if (Math.abs(y) > 0.7) upper++;
+  }
+  assert.ok(central > upper * 2.5, "Starting school has a slab-like uniform height distribution");
+  inspect(dense);
+});
+
+test("rounded soft boundaries turn head-on and corner approaches without stalls or unbounded drift", () => {
+  for (const [x, z] of [[23, 0], [-23, 0], [0, 18], [18, 15]]) {
+    const school = new School(200, 83);
+    const length = Math.hypot(x / (22 * 22), z / (18 * 18));
+    for (let i = 0; i < school.count; i++) {
+      const k = i * 3;
+      school.positions[k] = x + ((i % 10) - 5) * 0.05;
+      school.positions[k + 1] = 12 + ((i % 7) - 3) * 0.1;
+      school.positions[k + 2] = z + ((i % 11) - 5) * 0.05;
+      school.velocities[k] = x / (22 * 22) / length * school.cruise[i];
+      school.velocities[k + 1] = 0;
+      school.velocities[k + 2] = z / (18 * 18) / length * school.cruise[i];
+    }
+    for (let step = 0; step < 600; step++) {
+      school.step();
+      if (step % 30 === 0) inspect(school);
+    }
+    inspect(school);
+    assert.ok(school.stats.maxTurn > 0.003);
+  }
+});
+
+test("ceiling and floor lookahead turn vertical swimmers instead of braking them into a boundary", () => {
+  for (const sign of [-1, 1]) {
+    const school = new School(200, 83);
+    for (let i = 0; i < school.count; i++) {
+      const k = i * 3;
+      school.positions[k] = ((i % 10) - 5) * 0.05;
+      school.positions[k + 1] = 12 + ((i % 7) - 3) * 0.05;
+      school.positions[k + 2] = ((i % 11) - 5) * 0.05;
+      school.velocities[k] = 0;
+      school.velocities[k + 1] = sign * school.cruise[i];
+      school.velocities[k + 2] = 0;
+    }
+    for (let step = 0; step < 600; step++) {
+      school.step();
+      if (step % 15 === 0) inspect(school);
+    }
+    inspect(school);
+  }
+});

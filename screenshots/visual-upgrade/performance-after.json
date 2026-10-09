@@ -1,0 +1,241 @@
+{
+  "label": "after",
+  "url": "http://127.0.0.1:4187",
+  "mode": "performance",
+  "browser": "155.0.8059.40",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "recordedAt": "2026-10-09T10:09:54.661Z",
+  "screenshots": [],
+  "errors": [],
+  "externalRequests": [],
+  "populations": [
+    {
+      "count": 200,
+      "frames": 239,
+      "meanFrameMs": 16.66569037656904,
+      "fps": 60.00351485024227,
+      "p95FrameMs": 16.700000000000728,
+      "meanSimulationMs": 0.24859487139631647,
+      "state": {
+        "count": 200,
+        "paused": false,
+        "time": 6.9999999999999805,
+        "steps": 420,
+        "seed": 139,
+        "finite": true,
+        "minY": 8.02502155303955,
+        "maxY": 18.0456600189209,
+        "maxX": 21.219017028808594,
+        "maxZ": 18.53114891052246,
+        "minSpeed": 2.6040658222184025,
+        "maxSpeed": 3.7389167102936756,
+        "averageNeighbors": 31.23,
+        "maxCandidates": 160,
+        "maxTurn": 0.014249644629160563,
+        "cohesion": 1,
+        "separation": 1,
+        "fps": 60,
+        "simulationMs": 0.23815786909927542,
+        "drawCalls": 12,
+        "triangles": 180130,
+        "firstPosition": [
+          8.726818084716797,
+          10.397137641906738,
+          8.665897369384766
+        ],
+        "firstVelocity": [
+          2.620758295059204,
+          0.42207837104797363,
+          1.055459976196289
+        ],
+        "firstMatrix": [
+          0.8836590051651001,
+          0.14231504499912262,
+          0.3558766543865204,
+          0,
+          -0.1320115327835083,
+          0.9526286721229553,
+          -0.05316510424017906,
+          0,
+          -0.3598259687423706,
+          6.68354531676364e-18,
+          0.8934653401374817,
+          0,
+          8.726818084716797,
+          10.397137641906738,
+          8.665897369384766,
+          1
+        ],
+        "camera": [
+          26,
+          23,
+          43
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "count": 850,
+      "frames": 239,
+      "meanFrameMs": 16.666108786610874,
+      "fps": 60.00200843542882,
+      "p95FrameMs": 16.799999999999272,
+      "meanSimulationMs": 0.7517445351283795,
+      "state": {
+        "count": 850,
+        "paused": false,
+        "time": 6.983333333333314,
+        "steps": 419,
+        "seed": 236,
+        "finite": true,
+        "minY": 7.089812278747559,
+        "maxY": 18.86870765686035,
+        "maxX": 22.243131637573242,
+        "maxZ": 18.720781326293945,
+        "minSpeed": 2.6003043019600853,
+        "maxSpeed": 3.7437662156197544,
+        "averageNeighbors": 36.001176470588234,
+        "maxCandidates": 160,
+        "maxTurn": 0.014522018305460611,
+        "cohesion": 1,
+        "separation": 1,
+        "fps": 60,
+        "simulationMs": 0.8176892374510141,
+        "drawCalls": 12,
+        "triangles": 524630,
+        "firstPosition": [
+          14.983359336853027,
+          10.26343822479248,
+          13.017152786254883
+        ],
+        "firstVelocity": [
+          2.672966718673706,
+          0.10433981567621231,
+          -1.2918192148208618
+        ],
+        "firstMatrix": [
+          0.8497414588928223,
+          0.033169835805892944,
+          -0.4106719195842743,
+          0,
+          -0.029864929616451263,
+          0.9437754154205322,
+          0.01443343423306942,
+          0,
+          0.4109254777431488,
+          2.457300275832451e-18,
+          0.85026615858078,
+          0,
+          14.983359336853027,
+          10.26343822479248,
+          13.017152786254883,
+          1
+        ],
+        "camera": [
+          26,
+          23,
+          43
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "count": 2000,
+      "frames": 239,
+      "meanFrameMs": 16.66569037656903,
+      "fps": 60.0035148502423,
+      "p95FrameMs": 16.799999999999272,
+      "meanSimulationMs": 1.5762494435739205,
+      "state": {
+        "count": 2000,
+        "paused": false,
+        "time": 6.983333333333314,
+        "steps": 419,
+        "seed": 333,
+        "finite": true,
+        "minY": 6.372497081756592,
+        "maxY": 19.05611801147461,
+        "maxX": 22.483102798461914,
+        "maxZ": 19.038976669311523,
+        "minSpeed": 2.587345325102928,
+        "maxSpeed": 3.7502668230577694,
+        "averageNeighbors": 37.3885,
+        "maxCandidates": 160,
+        "maxTurn": 0.0145031112353007,
+        "cohesion": 1,
+        "separation": 1,
+        "fps": 60,
+        "simulationMs": 1.6396332827700448,
+        "drawCalls": 12,
+        "triangles": 1134130,
+        "firstPosition": [
+          17.174711227416992,
+          13.021302223205566,
+          10.746973991394043
+        ],
+        "firstVelocity": [
+          2.6465370655059814,
+          0.5462590456008911,
+          -1.9177354574203491
+        ],
+        "firstMatrix": [
+          0.6272153258323669,
+          0.12946051359176636,
+          -0.4544931948184967,
+          0,
+          -0.10483147948980331,
+          0.7745729088783264,
+          0.07596305757761002,
+          0,
+          0.46079763770103455,
+          -1.6347699486061044e-17,
+          0.6359156370162964,
+          0,
+          17.174711227416992,
+          13.021302223205566,
+          10.746973991394043,
+          1
+        ],
+        "camera": [
+          26,
+          23,
+          43
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    }
+  ],
+  "webgl": {
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Pro, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)"
+  }
+}

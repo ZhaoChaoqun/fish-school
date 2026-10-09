@@ -38,11 +38,23 @@ input[type="range"]::-moz-range-thumb { height: 10px; width: 10px; border: 0; ba
   .eyebrow { font-size: 8px; letter-spacing: 2px; }
   h1 { font-size: 56px; }
   .masthead p { font-size: 11px; }
-  .controls { width: 228px; right: 18px; bottom: 55px; padding: 17px; }
-  .transport { margin: 15px 0 18px; }
-  label { margin-top: 15px; }
+  .controls { display: grid; grid-template-columns: 1fr 1fr; column-gap: 18px; width: auto; left: 18px; right: 18px; bottom: 49px; padding: 16px 17px; }
+  .panel-heading, .transport, .population-field, .panel-foot { grid-column: 1 / -1; }
+  .transport { margin: 13px 0 0; }
+  label { margin-top: 14px; font-size: 10px; gap: 6px; }
+  output { font-size: 9px; }
+  .panel-foot { margin-top: 18px; padding-top: 12px; }
   .scene-footer { left: 25px; bottom: 21px; font-size: 8px; letter-spacing: 1px; }
   .scene-footer span:last-child { display: none; }
+}
+@media (max-height: 580px) and (min-aspect-ratio: 1 / 1) {
+  .masthead { top: 20px; left: 25px; }
+  h1 { font-size: 50px; }
+  .masthead p { font-size: 11px; }
+  .controls { display: block; width: 230px; left: auto; right: 18px; bottom: 42px; padding: 14px; }
+  .transport { margin: 11px 0 13px; }
+  label { margin-top: 13px; font-size: 10px; }
+  .panel-foot { margin-top: 14px; padding-top: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   button { transition: none; }

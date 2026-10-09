@@ -1,0 +1,1419 @@
+{
+  "label": "after",
+  "url": "http://127.0.0.1:4187",
+  "mode": "checks",
+  "browser": "155.0.8059.40",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "recordedAt": "2026-10-09T10:09:08.328Z",
+  "screenshots": [
+    {
+      "name": "layout-390x844",
+      "path": "layout-390x844.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fixedCamera": false,
+      "count": 850,
+      "paused": false,
+      "time": 7.999999999999977,
+      "steps": 480,
+      "seed": 42,
+      "finite": true,
+      "minY": 6.526015758514404,
+      "maxY": 19.05417251586914,
+      "maxX": 22.600055694580078,
+      "maxZ": 19.4348087310791,
+      "minSpeed": 2.5941710939663234,
+      "maxSpeed": 3.7457570715294994,
+      "averageNeighbors": 36.12235294117647,
+      "maxCandidates": 160,
+      "maxTurn": 0.014466789833704629,
+      "cohesion": 1,
+      "separation": 1,
+      "fps": 0,
+      "simulationMs": 0,
+      "drawCalls": 12,
+      "triangles": 524630,
+      "firstPosition": [
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855
+      ],
+      "firstVelocity": [
+        3.0444741249084473,
+        -0.1195402592420578,
+        1.4240423440933228
+      ],
+      "firstMatrix": [
+        0.6867716908454895,
+        -0.02696586214005947,
+        0.32123512029647827,
+        0,
+        0.024425890296697617,
+        0.7581868767738342,
+        0.011425127275288105,
+        0,
+        -0.3214382231235504,
+        1.3160762010254503e-18,
+        0.6872059106826782,
+        0,
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855,
+        1
+      ],
+      "camera": [
+        25.999999999999993,
+        23,
+        42.999999999999986
+      ],
+      "droppedTime": 0,
+      "cameraTarget": [
+        0,
+        7.5,
+        0
+      ],
+      "verticalFov": 100.36920599534565,
+      "viewOffsetY": 71.203125,
+      "pixelRatio": 1,
+      "proceduralReflections": true,
+      "visibleFish": 850,
+      "meanScreenX": 0.29472394184672246,
+      "meanScreenY": 0.1738820803659625
+    },
+    {
+      "name": "layout-320x568",
+      "path": "layout-320x568.png",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "fixedCamera": false,
+      "count": 850,
+      "paused": false,
+      "time": 7.999999999999977,
+      "steps": 480,
+      "seed": 42,
+      "finite": true,
+      "minY": 6.526015758514404,
+      "maxY": 19.05417251586914,
+      "maxX": 22.600055694580078,
+      "maxZ": 19.4348087310791,
+      "minSpeed": 2.5941710939663234,
+      "maxSpeed": 3.7457570715294994,
+      "averageNeighbors": 36.12235294117647,
+      "maxCandidates": 160,
+      "maxTurn": 0.014466789833704629,
+      "cohesion": 1,
+      "separation": 1,
+      "fps": 0,
+      "simulationMs": 0,
+      "drawCalls": 12,
+      "triangles": 524630,
+      "firstPosition": [
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855
+      ],
+      "firstVelocity": [
+        3.0444741249084473,
+        -0.1195402592420578,
+        1.4240423440933228
+      ],
+      "firstMatrix": [
+        0.6867716908454895,
+        -0.02696586214005947,
+        0.32123512029647827,
+        0,
+        0.024425890296697617,
+        0.7581868767738342,
+        0.011425127275288105,
+        0,
+        -0.3214382231235504,
+        1.3160762010254503e-18,
+        0.6872059106826782,
+        0,
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855,
+        1
+      ],
+      "camera": [
+        25.999999999999993,
+        23,
+        42.999999999999986
+      ],
+      "droppedTime": 0,
+      "cameraTarget": [
+        0,
+        7.5,
+        0
+      ],
+      "verticalFov": 89.06998880504972,
+      "viewOffsetY": 71.203125,
+      "pixelRatio": 1,
+      "proceduralReflections": true,
+      "visibleFish": 850,
+      "meanScreenX": 0.29472394184672257,
+      "meanScreenY": 0.2569994120857675
+    },
+    {
+      "name": "layout-844x390",
+      "path": "layout-844x390.png",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "fixedCamera": false,
+      "count": 850,
+      "paused": false,
+      "time": 7.999999999999977,
+      "steps": 480,
+      "seed": 42,
+      "finite": true,
+      "minY": 6.526015758514404,
+      "maxY": 19.05417251586914,
+      "maxX": 22.600055694580078,
+      "maxZ": 19.4348087310791,
+      "minSpeed": 2.5941710939663234,
+      "maxSpeed": 3.7457570715294994,
+      "averageNeighbors": 36.12235294117647,
+      "maxCandidates": 160,
+      "maxTurn": 0.014466789833704629,
+      "cohesion": 1,
+      "separation": 1,
+      "fps": 0,
+      "simulationMs": 0,
+      "drawCalls": 12,
+      "triangles": 524630,
+      "firstPosition": [
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855
+      ],
+      "firstVelocity": [
+        3.0444741249084473,
+        -0.1195402592420578,
+        1.4240423440933228
+      ],
+      "firstMatrix": [
+        0.6867716908454895,
+        -0.02696586214005947,
+        0.32123512029647827,
+        0,
+        0.024425890296697617,
+        0.7581868767738342,
+        0.011425127275288105,
+        0,
+        -0.3214382231235504,
+        1.3160762010254503e-18,
+        0.6872059106826782,
+        0,
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855,
+        1
+      ],
+      "camera": [
+        26,
+        23,
+        43
+      ],
+      "droppedTime": 0,
+      "cameraTarget": [
+        0,
+        11,
+        0
+      ],
+      "verticalFov": 48,
+      "viewOffsetY": 0,
+      "pixelRatio": 1,
+      "proceduralReflections": true,
+      "visibleFish": 850,
+      "meanScreenX": 0.16992243386535047,
+      "meanScreenY": -0.1329791465593661
+    },
+    {
+      "name": "layout-640x360",
+      "path": "layout-640x360.png",
+      "viewport": {
+        "width": 640,
+        "height": 360
+      },
+      "fixedCamera": false,
+      "count": 850,
+      "paused": false,
+      "time": 7.999999999999977,
+      "steps": 480,
+      "seed": 42,
+      "finite": true,
+      "minY": 6.526015758514404,
+      "maxY": 19.05417251586914,
+      "maxX": 22.600055694580078,
+      "maxZ": 19.4348087310791,
+      "minSpeed": 2.5941710939663234,
+      "maxSpeed": 3.7457570715294994,
+      "averageNeighbors": 36.12235294117647,
+      "maxCandidates": 160,
+      "maxTurn": 0.014466789833704629,
+      "cohesion": 1,
+      "separation": 1,
+      "fps": 0,
+      "simulationMs": 0,
+      "drawCalls": 12,
+      "triangles": 524630,
+      "firstPosition": [
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855
+      ],
+      "firstVelocity": [
+        3.0444741249084473,
+        -0.1195402592420578,
+        1.4240423440933228
+      ],
+      "firstMatrix": [
+        0.6867716908454895,
+        -0.02696586214005947,
+        0.32123512029647827,
+        0,
+        0.024425890296697617,
+        0.7581868767738342,
+        0.011425127275288105,
+        0,
+        -0.3214382231235504,
+        1.3160762010254503e-18,
+        0.6872059106826782,
+        0,
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855,
+        1
+      ],
+      "camera": [
+        26,
+        23,
+        43
+      ],
+      "droppedTime": 0,
+      "cameraTarget": [
+        0,
+        11,
+        0
+      ],
+      "verticalFov": 48,
+      "viewOffsetY": 0,
+      "pixelRatio": 1,
+      "proceduralReflections": true,
+      "visibleFish": 850,
+      "meanScreenX": 0.2068478858399362,
+      "meanScreenY": -0.1329791465593661
+    },
+    {
+      "name": "layout-860x920",
+      "path": "layout-860x920.png",
+      "viewport": {
+        "width": 860,
+        "height": 920
+      },
+      "fixedCamera": false,
+      "count": 850,
+      "paused": false,
+      "time": 7.999999999999977,
+      "steps": 480,
+      "seed": 42,
+      "finite": true,
+      "minY": 6.526015758514404,
+      "maxY": 19.05417251586914,
+      "maxX": 22.600055694580078,
+      "maxZ": 19.4348087310791,
+      "minSpeed": 2.5941710939663234,
+      "maxSpeed": 3.7457570715294994,
+      "averageNeighbors": 36.12235294117647,
+      "maxCandidates": 160,
+      "maxTurn": 0.014466789833704629,
+      "cohesion": 1,
+      "separation": 1,
+      "fps": 0,
+      "simulationMs": 0,
+      "drawCalls": 12,
+      "triangles": 524630,
+      "firstPosition": [
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855
+      ],
+      "firstVelocity": [
+        3.0444741249084473,
+        -0.1195402592420578,
+        1.4240423440933228
+      ],
+      "firstMatrix": [
+        0.6867716908454895,
+        -0.02696586214005947,
+        0.32123512029647827,
+        0,
+        0.024425890296697617,
+        0.7581868767738342,
+        0.011425127275288105,
+        0,
+        -0.3214382231235504,
+        1.3160762010254503e-18,
+        0.6872059106826782,
+        0,
+        13.66181468963623,
+        11.425474166870117,
+        6.1507182121276855,
+        1
+      ],
+      "camera": [
+        26,
+        23,
+        43
+      ],
+      "droppedTime": 0,
+      "cameraTarget": [
+        0,
+        11,
+        0
+      ],
+      "verticalFov": 61.334336684405585,
+      "viewOffsetY": 0,
+      "pixelRatio": 1,
+      "proceduralReflections": true,
+      "visibleFish": 850,
+      "meanScreenX": 0.29536547296132937,
+      "meanScreenY": -0.09984477263058517
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "checks": [
+    {
+      "name": "real WebGL startup and animation",
+      "details": {
+        "count": 850,
+        "paused": false,
+        "time": 1.4499999999999997,
+        "steps": 87,
+        "seed": 42,
+        "finite": true,
+        "minY": 6.810509204864502,
+        "maxY": 16.627445220947266,
+        "maxX": 16.882266998291016,
+        "maxZ": 9.745540618896484,
+        "minSpeed": 2.598753766854694,
+        "maxSpeed": 3.758641207151813,
+        "averageNeighbors": 37.70117647058824,
+        "maxCandidates": 160,
+        "maxTurn": 0.014438426367441812,
+        "cohesion": 1,
+        "separation": 1,
+        "fps": 58.15099546619358,
+        "simulationMs": 0.8577264270936817,
+        "drawCalls": 12,
+        "triangles": 524630,
+        "firstPosition": [
+          -7.49254035949707,
+          11.046270370483398,
+          0.33941733837127686
+        ],
+        "firstVelocity": [
+          3.311363697052002,
+          0.29101860523223877,
+          0.5390374660491943
+        ],
+        "firstMatrix": [
+          0.746008574962616,
+          0.06556282937526703,
+          0.12143835425376892,
+          0,
+          -0.0647110566496849,
+          0.7558280229568481,
+          -0.010533932596445084,
+          0,
+          -0.12189437448978424,
+          6.580381005127252e-19,
+          0.7488099336624146,
+          0,
+          -7.49254035949707,
+          11.046270370483398,
+          0.33941733837127686,
+          1
+        ],
+        "camera": [
+          26,
+          23,
+          43
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "name": "pause freezes fish, fins, plants, particles, caustics and shafts pixel-for-pixel",
+      "details": {
+        "count": 850,
+        "paused": true,
+        "time": 1.4999999999999996,
+        "steps": 90,
+        "seed": 42,
+        "finite": true,
+        "minY": 6.814230918884277,
+        "maxY": 16.667739868164062,
+        "maxX": 16.98253631591797,
+        "maxZ": 9.80179214477539,
+        "minSpeed": 2.5985036741259475,
+        "maxSpeed": 3.758593297058295,
+        "averageNeighbors": 37.597647058823526,
+        "maxCandidates": 160,
+        "maxTurn": 0.014319413100883402,
+        "cohesion": 1,
+        "separation": 1,
+        "fps": 58.15099546619358,
+        "simulationMs": 0.3820259234691473,
+        "drawCalls": 12,
+        "triangles": 524630,
+        "firstPosition": [
+          -7.32695198059082,
+          11.060323715209961,
+          0.3665342628955841
+        ],
+        "firstVelocity": [
+          3.311763048171997,
+          0.27710703015327454,
+          0.5446008443832397
+        ],
+        "firstMatrix": [
+          0.7460731863975525,
+          0.0624266043305397,
+          0.12268754839897156,
+          0,
+          -0.061599280685186386,
+          0.7560935616493225,
+          -0.010129655711352825,
+          0,
+          -0.1231050118803978,
+          6.580381005127252e-19,
+          0.7486118078231812,
+          0,
+          -7.32695198059082,
+          11.060323715209961,
+          0.3665342628955841,
+          1
+        ],
+        "camera": [
+          26,
+          23,
+          43
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "name": "both behavior sliders and labels",
+      "details": {
+        "cohesion": 1.55,
+        "separation": 0.65
+      }
+    },
+    {
+      "name": "repeated New school while paused updates geometry immediately and keeps controls",
+      "details": {
+        "count": 850,
+        "paused": true,
+        "time": 0,
+        "steps": 0,
+        "seed": 236,
+        "finite": true,
+        "minY": 6.73663330078125,
+        "maxY": 16.353857040405273,
+        "maxX": 13.674720764160156,
+        "maxZ": 8.464759826660156,
+        "minSpeed": 2.6021792123536307,
+        "maxSpeed": 3.7504207265158227,
+        "averageNeighbors": 0,
+        "maxCandidates": 0,
+        "maxTurn": 0,
+        "cohesion": 1.55,
+        "separation": 0.65,
+        "fps": 59.020263623844166,
+        "simulationMs": 0.0025436009340418717,
+        "drawCalls": 12,
+        "triangles": 524630,
+        "firstPosition": [
+          -3.551029920578003,
+          10.21498966217041,
+          7.109374523162842
+        ],
+        "firstVelocity": [
+          2.801844835281372,
+          0.052003294229507446,
+          1.027559757232666
+        ],
+        "firstMatrix": [
+          0.8864787220954895,
+          0.016453377902507782,
+          0.3251107335090637,
+          0,
+          -0.015447301790118217,
+          0.9442147612571716,
+          -0.005665204953402281,
+          0,
+          -0.32516011595726013,
+          1.2286501379162254e-18,
+          0.8866133093833923,
+          0,
+          -3.551029920578003,
+          10.21498966217041,
+          7.109374523162842,
+          1
+        ],
+        "camera": [
+          26,
+          23,
+          43
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "name": "200 fish via reachable keyboard population control",
+      "details": {
+        "count": 200,
+        "paused": true,
+        "time": 0,
+        "steps": 0,
+        "seed": 333,
+        "finite": true,
+        "minY": 9.149298667907715,
+        "maxY": 14.11483383178711,
+        "maxX": 10.92552375793457,
+        "maxZ": 6.075955867767334,
+        "minSpeed": 2.605217155008303,
+        "maxSpeed": 3.744443980467743,
+        "averageNeighbors": 0,
+        "maxCandidates": 0,
+        "maxTurn": 0,
+        "cohesion": 1.55,
+        "separation": 0.65,
+        "fps": 59.020263623844166,
+        "simulationMs": 0.0025436009340418717,
+        "drawCalls": 12,
+        "triangles": 524630,
+        "firstPosition": [
+          -5.326263904571533,
+          11.266393661499023,
+          4.044075965881348
+        ],
+        "firstVelocity": [
+          3.3106062412261963,
+          0.05420433729887009,
+          0.33557257056236267
+        ],
+        "firstMatrix": [
+          0.7812100648880005,
+          0.012790701352059841,
+          0.07918570190668106,
+          0,
+          -0.012725494801998138,
+          0.785213053226471,
+          -0.0012898927088826895,
+          0,
+          -0.07919620722532272,
+          -8.514426600245176e-20,
+          0.7813137173652649,
+          0,
+          -5.326263904571533,
+          11.266393661499023,
+          4.044075965881348,
+          1
+        ],
+        "camera": [
+          26,
+          23,
+          43
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "name": "850 fish via reachable keyboard population control",
+      "details": {
+        "count": 850,
+        "paused": true,
+        "time": 0,
+        "steps": 0,
+        "seed": 1594,
+        "finite": true,
+        "minY": 6.986325740814209,
+        "maxY": 16.102540969848633,
+        "maxX": 13.55124282836914,
+        "maxZ": 8.496844291687012,
+        "minSpeed": 2.6009422717407644,
+        "maxSpeed": 3.7511770358471686,
+        "averageNeighbors": 0,
+        "maxCandidates": 0,
+        "maxTurn": 0,
+        "cohesion": 1.55,
+        "separation": 0.65,
+        "fps": 59.020263623844166,
+        "simulationMs": 0.0022475257853193974,
+        "drawCalls": 12,
+        "triangles": 339130,
+        "firstPosition": [
+          -3.079683303833008,
+          8.605144500732422,
+          6.2955322265625
+        ],
+        "firstVelocity": [
+          3.27582049369812,
+          0.03566857799887657,
+          0.5125519037246704
+        ],
+        "firstMatrix": [
+          0.6987160444259644,
+          0.0076079280115664005,
+          0.10932473838329315,
+          0,
+          -0.007516477722674608,
+          0.7072170376777649,
+          -0.0011760671623051167,
+          0,
+          -0.10933106392621994,
+          -7.668106450034349e-20,
+          0.6987564563751221,
+          0,
+          -3.079683303833008,
+          8.605144500732422,
+          6.2955322265625,
+          1
+        ],
+        "camera": [
+          26,
+          23,
+          43
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "name": "2000 fish via reachable keyboard population control",
+      "details": {
+        "count": 2000,
+        "paused": true,
+        "time": 0,
+        "steps": 0,
+        "seed": 5183,
+        "finite": true,
+        "minY": 5.363776206970215,
+        "maxY": 17.868398666381836,
+        "maxX": 16.113624572753906,
+        "maxZ": 10.358773231506348,
+        "minSpeed": 2.6013257049148,
+        "maxSpeed": 3.7488595763181713,
+        "averageNeighbors": 0,
+        "maxCandidates": 0,
+        "maxTurn": 0,
+        "cohesion": 1.55,
+        "separation": 0.65,
+        "fps": 59.020263623844166,
+        "simulationMs": 0.0018667589568737261,
+        "drawCalls": 12,
+        "triangles": 1001630,
+        "firstPosition": [
+          -4.518437385559082,
+          12.311344146728516,
+          7.214209079742432
+        ],
+        "firstVelocity": [
+          2.6576087474823,
+          -0.14317920804023743,
+          0.4225844740867615
+        ],
+        "firstMatrix": [
+          0.6753396987915039,
+          -0.036384060978889465,
+          0.10738527774810791,
+          0,
+          0.03593263775110245,
+          0.6838240027427673,
+          0.005713623017072678,
+          0,
+          -0.1075371727347374,
+          0,
+          0.6762949228286743,
+          0,
+          -4.518437385559082,
+          12.311344146728516,
+          7.214209079742432,
+          1
+        ],
+        "camera": [
+          26,
+          23,
+          43
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "name": "orbit and zoom remain available while fully paused",
+      "details": [
+        -3.452352982036099,
+        33.81889429925219,
+        54.7633963792725
+      ]
+    },
+    {
+      "name": "New school preserves manual exploration without auto-follow",
+      "details": [
+        -3.5030661351086865,
+        33.832360378094904,
+        54.75456244336352
+      ]
+    },
+    {
+      "name": "resume, 2,000 velocity-aligned upright instances and fixed shared animation clock",
+      "details": {
+        "count": 2000,
+        "paused": false,
+        "time": 1.183333333333334,
+        "steps": 71,
+        "seed": 5280,
+        "finite": true,
+        "minY": 6.152642250061035,
+        "maxY": 17.895282745361328,
+        "maxX": 18.192867279052734,
+        "maxZ": 11.15713882446289,
+        "minSpeed": 2.6007065885395186,
+        "maxSpeed": 3.75435030538869,
+        "averageNeighbors": 38.164,
+        "maxCandidates": 160,
+        "maxTurn": 0.014205901195249473,
+        "cohesion": 1.55,
+        "separation": 0.65,
+        "fps": 60.00393468424162,
+        "simulationMs": 1.377143378858909,
+        "drawCalls": 12,
+        "triangles": 1134130,
+        "firstPosition": [
+          1.986966609954834,
+          11.883038520812988,
+          7.67707633972168
+        ],
+        "firstVelocity": [
+          2.9614973068237305,
+          -0.48739904165267944,
+          1.6851223707199097
+        ],
+        "firstMatrix": [
+          0.8789069056510925,
+          -0.14464925229549408,
+          0.5001070499420166,
+          0,
+          0.12572148442268372,
+          1.011229157447815,
+          0.07153681665658951,
+          0,
+          -0.5051975250244141,
+          2.126470423817633e-17,
+          0.8878531455993652,
+          0,
+          1.986966609954834,
+          11.883038520812988,
+          7.67707633972168,
+          1
+        ],
+        "camera": [
+          -3.5095666142245343,
+          33.83408664103496,
+          54.753426290930626
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true,
+        "minimumAlignment": 0.9999999999999989,
+        "minimumUp": 0.9061230662300723,
+        "gpuTime": 1.183333333333334
+      }
+    },
+    {
+      "name": "loose and spacious extremes remain reachable",
+      "details": {
+        "count": 2000,
+        "paused": false,
+        "time": 1.183333333333334,
+        "steps": 71,
+        "seed": 5280,
+        "finite": true,
+        "minY": 6.152642250061035,
+        "maxY": 17.895282745361328,
+        "maxX": 18.192867279052734,
+        "maxZ": 11.15713882446289,
+        "minSpeed": 2.6007065885395186,
+        "maxSpeed": 3.75435030538869,
+        "averageNeighbors": 38.164,
+        "maxCandidates": 160,
+        "maxTurn": 0.014205901195249473,
+        "cohesion": 0.45,
+        "separation": 1.6,
+        "fps": 60.00393468424162,
+        "simulationMs": 1.377143378858909,
+        "drawCalls": 12,
+        "triangles": 1134130,
+        "firstPosition": [
+          1.986966609954834,
+          11.883038520812988,
+          7.67707633972168
+        ],
+        "firstVelocity": [
+          2.9614973068237305,
+          -0.48739904165267944,
+          1.6851223707199097
+        ],
+        "firstMatrix": [
+          0.8789069056510925,
+          -0.14464925229549408,
+          0.5001070499420166,
+          0,
+          0.12572148442268372,
+          1.011229157447815,
+          0.07153681665658951,
+          0,
+          -0.5051975250244141,
+          2.126470423817633e-17,
+          0.8878531455993652,
+          0,
+          1.986966609954834,
+          11.883038520812988,
+          7.67707633972168,
+          1
+        ],
+        "camera": [
+          -3.5095666142245343,
+          33.83408664103496,
+          54.753426290930626
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          11,
+          0
+        ],
+        "verticalFov": 48,
+        "viewOffsetY": 0,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "name": "narrow and landscape layout 390x844",
+      "details": {
+        "header": {
+          "x": 25,
+          "y": 25,
+          "right": 183.921875,
+          "bottom": 154.59375,
+          "width": 158.921875,
+          "height": 129.59375
+        },
+        "panel": {
+          "x": 18,
+          "y": 543,
+          "right": 372,
+          "bottom": 795,
+          "width": 354,
+          "height": 252
+        },
+        "footer": {
+          "x": 25,
+          "y": 812,
+          "right": 355,
+          "bottom": 823,
+          "width": 330,
+          "height": 11
+        },
+        "width": 390,
+        "height": 844,
+        "controls": [
+          {
+            "x": 36,
+            "y": 587,
+            "right": 176.671875,
+            "bottom": 628,
+            "width": 140.671875,
+            "height": 41
+          },
+          {
+            "x": 184.671875,
+            "y": 587,
+            "right": 354,
+            "bottom": 628,
+            "width": 169.328125,
+            "height": 41
+          },
+          {
+            "x": 36,
+            "y": 668,
+            "right": 354,
+            "bottom": 671,
+            "width": 318,
+            "height": 3
+          },
+          {
+            "x": 36,
+            "y": 732,
+            "right": 186,
+            "bottom": 735,
+            "width": 150,
+            "height": 3
+          },
+          {
+            "x": 204,
+            "y": 732,
+            "right": 354,
+            "bottom": 735,
+            "width": 150,
+            "height": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "narrow and landscape layout 320x568",
+      "details": {
+        "header": {
+          "x": 25,
+          "y": 25,
+          "right": 183.921875,
+          "bottom": 154.59375,
+          "width": 158.921875,
+          "height": 129.59375
+        },
+        "panel": {
+          "x": 18,
+          "y": 267,
+          "right": 302,
+          "bottom": 519,
+          "width": 284,
+          "height": 252
+        },
+        "footer": {
+          "x": 25,
+          "y": 536,
+          "right": 285,
+          "bottom": 547,
+          "width": 260,
+          "height": 11
+        },
+        "width": 320,
+        "height": 568,
+        "controls": [
+          {
+            "x": 36,
+            "y": 311,
+            "right": 145.5625,
+            "bottom": 352,
+            "width": 109.5625,
+            "height": 41
+          },
+          {
+            "x": 153.5625,
+            "y": 311,
+            "right": 284,
+            "bottom": 352,
+            "width": 130.4375,
+            "height": 41
+          },
+          {
+            "x": 36,
+            "y": 392,
+            "right": 284,
+            "bottom": 395,
+            "width": 248,
+            "height": 3
+          },
+          {
+            "x": 36,
+            "y": 456,
+            "right": 151,
+            "bottom": 459,
+            "width": 115,
+            "height": 3
+          },
+          {
+            "x": 169,
+            "y": 456,
+            "right": 284,
+            "bottom": 459,
+            "width": 115,
+            "height": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "narrow and landscape layout 844x390",
+      "details": {
+        "header": {
+          "x": 25,
+          "y": 20,
+          "right": 218.125,
+          "bottom": 146.59375,
+          "width": 193.125,
+          "height": 126.59375
+        },
+        "panel": {
+          "x": 596,
+          "y": 68,
+          "right": 826,
+          "bottom": 348,
+          "width": 230,
+          "height": 280
+        },
+        "footer": {
+          "x": 48,
+          "y": 350,
+          "right": 809,
+          "bottom": 362,
+          "width": 761,
+          "height": 12
+        },
+        "width": 844,
+        "height": 390,
+        "controls": [
+          {
+            "x": 611,
+            "y": 108,
+            "right": 699.21875,
+            "bottom": 149,
+            "width": 88.21875,
+            "height": 41
+          },
+          {
+            "x": 707.21875,
+            "y": 108,
+            "right": 811,
+            "bottom": 149,
+            "width": 103.78125,
+            "height": 41
+          },
+          {
+            "x": 611,
+            "y": 188,
+            "right": 811,
+            "bottom": 191,
+            "width": 200,
+            "height": 3
+          },
+          {
+            "x": 611,
+            "y": 251,
+            "right": 811,
+            "bottom": 254,
+            "width": 200,
+            "height": 3
+          },
+          {
+            "x": 611,
+            "y": 293,
+            "right": 811,
+            "bottom": 296,
+            "width": 200,
+            "height": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "narrow and landscape layout 640x360",
+      "details": {
+        "header": {
+          "x": 25,
+          "y": 20,
+          "right": 174.5,
+          "bottom": 143.59375,
+          "width": 149.5,
+          "height": 123.59375
+        },
+        "panel": {
+          "x": 392,
+          "y": 38,
+          "right": 622,
+          "bottom": 318,
+          "width": 230,
+          "height": 280
+        },
+        "footer": {
+          "x": 25,
+          "y": 328,
+          "right": 605,
+          "bottom": 339,
+          "width": 580,
+          "height": 11
+        },
+        "width": 640,
+        "height": 360,
+        "controls": [
+          {
+            "x": 407,
+            "y": 78,
+            "right": 495.21875,
+            "bottom": 119,
+            "width": 88.21875,
+            "height": 41
+          },
+          {
+            "x": 503.21875,
+            "y": 78,
+            "right": 607,
+            "bottom": 119,
+            "width": 103.78125,
+            "height": 41
+          },
+          {
+            "x": 407,
+            "y": 158,
+            "right": 607,
+            "bottom": 161,
+            "width": 200,
+            "height": 3
+          },
+          {
+            "x": 407,
+            "y": 221,
+            "right": 607,
+            "bottom": 224,
+            "width": 200,
+            "height": 3
+          },
+          {
+            "x": 407,
+            "y": 263,
+            "right": 607,
+            "bottom": 266,
+            "width": 200,
+            "height": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "narrow and landscape layout 860x920",
+      "details": {
+        "header": {
+          "x": 48,
+          "y": 44,
+          "right": 275.109375,
+          "bottom": 203.78125,
+          "width": 227.109375,
+          "height": 159.78125
+        },
+        "panel": {
+          "x": 562,
+          "y": 500,
+          "right": 826,
+          "bottom": 844,
+          "width": 264,
+          "height": 344
+        },
+        "footer": {
+          "x": 48,
+          "y": 880,
+          "right": 825,
+          "bottom": 892,
+          "width": 777,
+          "height": 12
+        },
+        "width": 860,
+        "height": 920,
+        "controls": [
+          {
+            "x": 585,
+            "y": 556,
+            "right": 681.21875,
+            "bottom": 597,
+            "width": 96.21875,
+            "height": 41
+          },
+          {
+            "x": 689.21875,
+            "y": 556,
+            "right": 803,
+            "bottom": 597,
+            "width": 113.78125,
+            "height": 41
+          },
+          {
+            "x": 585,
+            "y": 648,
+            "right": 803,
+            "bottom": 651,
+            "width": 218,
+            "height": 3
+          },
+          {
+            "x": 585,
+            "y": 718,
+            "right": 803,
+            "bottom": 721,
+            "width": 218,
+            "height": 3
+          },
+          {
+            "x": 585,
+            "y": 767,
+            "right": 803,
+            "bottom": 770,
+            "width": 218,
+            "height": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "reduced motion starts still, reseeds still, and explicit resume works",
+      "details": {
+        "count": 850,
+        "paused": true,
+        "time": 0,
+        "steps": 0,
+        "seed": 42,
+        "finite": true,
+        "minY": 7.058543682098389,
+        "maxY": 16.387752532958984,
+        "maxX": 13.593847274780273,
+        "maxZ": 8.349852561950684,
+        "minSpeed": 2.601720654289313,
+        "maxSpeed": 3.749947916700163,
+        "averageNeighbors": 0,
+        "maxCandidates": 0,
+        "maxTurn": 0,
+        "cohesion": 1,
+        "separation": 1,
+        "fps": 59.31784478497281,
+        "simulationMs": 0,
+        "drawCalls": 12,
+        "triangles": 524630,
+        "firstPosition": [
+          -12.313843727111816,
+          10.568535804748535,
+          -0.18982091546058655
+        ],
+        "firstVelocity": [
+          3.367326021194458,
+          0.03742339462041855,
+          0.1390133947134018
+        ],
+        "firstMatrix": [
+          0.7579739093780518,
+          0.008423881605267525,
+          0.031291451305150986,
+          0,
+          -0.008416712284088135,
+          0.758619487285614,
+          -0.0003474673139862716,
+          0,
+          -0.03129338100552559,
+          0,
+          0.7580205798149109,
+          0,
+          -12.313843727111816,
+          10.568535804748535,
+          -0.18982091546058655,
+          1
+        ],
+        "camera": [
+          25.999999999999993,
+          23,
+          42.999999999999986
+        ],
+        "droppedTime": 0,
+        "cameraTarget": [
+          0,
+          7.5,
+          0
+        ],
+        "verticalFov": 100.36920599534565,
+        "viewOffsetY": 71.203125,
+        "pixelRatio": 1,
+        "proceduralReflections": true
+      }
+    },
+    {
+      "name": "no console/page errors or external asset requests",
+      "details": {
+        "errors": [],
+        "externalRequests": []
+      }
+    }
+  ],
+  "webgl": {
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Pro, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)"
+  }
+}

@@ -2,6 +2,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { School, FixedClock, MAX_FISH, seededRandom } from "./simulation.js";
 import { createOcean, fishGeometry, fishMaterial } from "./art.js";
+import { createWater, SUN_DIRECTION } from "./water.js";
+import { createFishOrientation } from "./pose.js";
 import "./style.css";
 
 const errorBox = document.querySelector("#error");
@@ -21,19 +23,18 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
 renderer.setSize(innerWidth, innerHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.22;
+renderer.toneMappingExposure = 1.08;
 document.querySelector("#ocean").append(renderer.domElement);
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("#0c5367");
-scene.fog = new THREE.FogExp2("#125b6c", 0.018);
 function viewFov() {
-  return Math.max(48, THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(20)) / (innerWidth / innerHeight))));
+  const halfHorizontal = innerHeight > innerWidth ? 29 : 25;
+  return Math.max(48, THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(halfHorizontal)) / (innerWidth / innerHeight))));
 }
-const camera = new THREE.PerspectiveCamera(viewFov(), innerWidth / innerHeight, 0.2, 170);
-camera.position.set(24, 16.5, 34);
+const camera = new THREE.PerspectiveCamera(viewFov(), innerWidth / innerHeight, 0.2, 300);
+camera.position.set(26, 23, 43);
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.target.set(0, 10.5, 0);
+controls.target.set(0, innerWidth <= 700 && innerHeight > innerWidth ? 7.5 : 11, 0);
 controls.enableDamping = true;
 controls.dampingFactor = 0.06;
 controls.minDistance = 11;
@@ -45,16 +46,32 @@ controls.rotateSpeed = 0.5;
 controls.zoomSpeed = 0.65;
 controls.update();
 
-scene.add(new THREE.HemisphereLight("#bcebe4", "#235465", 2.5));
-const sun = new THREE.DirectionalLight("#fff4d9", 3.4);
-sun.position.set(-18, 42, 14);
+function frameView() {
+  camera.aspect = innerWidth / innerHeight;
+  camera.fov = viewFov();
+  if (innerWidth <= 700 && innerHeight > innerWidth) {
+    const top = document.querySelector(".masthead").getBoundingClientRect().bottom + 28;
+    const bottom = document.querySelector(".controls").getBoundingClientRect().top - 24;
+    const offset = Math.max(0, innerHeight * 0.5 - (top + bottom) * 0.5);
+    camera.setViewOffset(innerWidth, innerHeight, 0, offset, innerWidth, innerHeight);
+  } else {
+    camera.clearViewOffset();
+  }
+  camera.updateProjectionMatrix();
+}
+frameView();
+
+scene.add(new THREE.HemisphereLight("#d8f0ed", "#2b5163", 1.75));
+const sun = new THREE.DirectionalLight("#fff2d5", 3);
+sun.position.copy(SUN_DIRECTION).multiplyScalar(50);
 scene.add(sun);
-const rim = new THREE.DirectionalLight("#5bc8eb", 1.9);
+const rim = new THREE.DirectionalLight("#75c1df", 1.15);
 rim.position.set(8, 20, -25);
 scene.add(rim);
 
 const time = { value: 0 };
-createOcean(scene, time);
+createWater(scene, renderer, time);
+const ocean = createOcean(scene, time);
 const school = new School();
 const clock = new FixedClock();
 const geometry = fishGeometry();
@@ -66,7 +83,7 @@ fish.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
 fish.frustumCulled = false;
 scene.add(fish);
 const dummy = new THREE.Object3D();
-const forward = new THREE.Vector3(1, 0, 0);
+const orientFish = createFishOrientation();
 const direction = new THREE.Vector3();
 const tint = new THREE.Color();
 let paused = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -74,6 +91,7 @@ let previous = performance.now();
 let resetSerial = 0;
 let frameCount = 0, fpsStart = previous, measuredFps = 0;
 let simulationMs = 0;
+let renderedSteps = -1;
 
 function populateAppearance() {
   const random = seededRandom(school.seed + 311);
@@ -82,7 +100,7 @@ function populateAppearance() {
     swim[i * 2] = school.phases[i];
     swim[i * 2 + 1] = 6.6 + school.cruise[i] * 1.8;
     const variant = random();
-    tint.set(variant < 0.12 ? "#e9cf8c" : variant < 0.4 ? "#9fcae1" : "#d1e9e5");
+    tint.set(variant < 0.09 ? "#e7d4a8" : variant < 0.36 ? "#abcce0" : "#e0ecee");
     fish.setColorAt(i, tint);
   }
   geometry.attributes.iSwim.needsUpdate = true;
@@ -94,12 +112,13 @@ function updateFish() {
     const k = i * 3;
     dummy.position.set(school.positions[k], school.positions[k + 1], school.positions[k + 2]);
     direction.set(school.velocities[k], school.velocities[k + 1], school.velocities[k + 2]).normalize();
-    dummy.quaternion.setFromUnitVectors(forward, direction);
+    orientFish(direction, dummy.quaternion);
     dummy.scale.setScalar(school.scales[i]);
     dummy.updateMatrix();
     fish.setMatrixAt(i, dummy.matrix);
   }
   fish.instanceMatrix.needsUpdate = true;
+  renderedSteps = school.steps;
 }
 
 function resetSchool(count = school.count) {
@@ -143,9 +162,7 @@ for (const slider of document.querySelectorAll('input[type="range"]')) {
 }
 
 window.addEventListener("resize", () => {
-  camera.aspect = innerWidth / innerHeight;
-  camera.fov = viewFov();
-  camera.updateProjectionMatrix();
+  frameView();
   renderer.setSize(innerWidth, innerHeight);
 });
 document.addEventListener("visibilitychange", () => {
@@ -170,8 +187,9 @@ function animate(now) {
   if (!paused && !document.hidden) clock.advance(delta, school);
   simulationMs = simulationMs * 0.94 + (performance.now() - start) * 0.06;
   time.value = school.time;
-  updateFish();
+  if (school.steps !== renderedSteps) updateFish();
   controls.update();
+  ocean.update(camera);
   renderer.render(scene, camera);
   frameCount++;
   if (now - fpsStart >= 1000) {
@@ -203,6 +221,9 @@ window.__pelagic = Object.freeze({
       firstPosition: Array.from(school.positions.slice(0, 3)), firstVelocity: Array.from(school.velocities.slice(0, 3)),
       firstMatrix: Array.from(fish.instanceMatrix.array.slice(0, 16)),
       camera: camera.position.toArray(), droppedTime: clock.droppedTime,
+      cameraTarget: controls.target.toArray(), verticalFov: camera.fov,
+      viewOffsetY: camera.view?.enabled ? camera.view.offsetY : 0,
+      pixelRatio: renderer.getPixelRatio(), proceduralReflections: Boolean(scene.environment),
     };
   },
 });

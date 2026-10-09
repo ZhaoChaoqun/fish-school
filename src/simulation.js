@@ -58,11 +58,13 @@ export class School {
     for (let i = 0; i < count; i++) {
       const group = i % 3;
       const angle = random() * Math.PI * 2;
-      const radius = Math.sqrt(random());
+      const vertical = random() * 2 - 1;
+      const radius = Math.cbrt(random());
+      const horizontal = Math.sqrt(1 - vertical * vertical) * radius;
       const k = i * 3;
-      this.positions[k] = (group - 1) * 7 + Math.cos(angle) * radius * 6.5 * densityScale;
-      this.positions[k + 1] = 11 + (random() - 0.5) * 7 * densityScale + group * 0.65;
-      this.positions[k + 2] = (group - 1) * -3 + Math.sin(angle) * radius * 5 * densityScale;
+      this.positions[k] = (group - 1) * 7 + Math.cos(angle) * horizontal * 7 * densityScale;
+      this.positions[k + 1] = 11 + vertical * radius * 4.4 * densityScale + group * 0.65;
+      this.positions[k + 2] = (group - 1) * -3 + Math.sin(angle) * horizontal * 5.7 * densityScale;
       this.cruise[i] = 2.6 + random() * 1.15;
       this.scales[i] = 0.68 + random() * 0.45;
       this.phases[i] = random() * Math.PI * 2;
@@ -160,19 +162,11 @@ export class School {
         fz += (az * inv - vz) * 0.7 + (pz * inv - z) * 0.115 * this.cohesion;
       }
       const futureX = x + vx * 2, futureY = y + vy * 2, futureZ = z + vz * 2;
-      const wallX = Math.max(0, Math.abs(futureX) - (BOUNDS.x - 9));
-      const wallZ = Math.max(0, Math.abs(futureZ) - (BOUNDS.z - 9));
+      const innerX = BOUNDS.x - 7, innerZ = BOUNDS.z - 5;
+      const edgeDistance = Math.hypot(futureX / innerX, futureZ / innerZ);
+      const wallHorizontal = Math.max(0, (edgeDistance - 1) * Math.min(innerX, innerZ));
       const wallY = Math.max(0, BOUNDS.minY + 4 - futureY, futureY - BOUNDS.maxY + 4);
-      const wallBlend = clamp(Math.max(wallX, wallZ, wallY) / 3, 0, 1);
-      if (wallBlend > 0) {
-        // Safety gradually takes priority over social forces. A tangential component
-        // ensures a head-on boundary encounter becomes a turn, never a backward stall.
-        const horizontalBlend = clamp(Math.max(wallX, wallZ) / 3, 0, 1);
-        const verticalBlend = clamp(wallY / 2, 0, 1);
-        fx = fx * (1 - wallBlend) - uz * 2.4 * horizontalBlend;
-        fz = fz * (1 - wallBlend) + ux * 2.4 * horizontalBlend;
-        fy = fy * (1 - wallBlend) + (((BOUNDS.minY + BOUNDS.maxY) * 0.5 - futureY) * 0.9 - vy) * verticalBlend;
-      }
+      const wallBlend = clamp(Math.max(wallHorizontal, wallY) / 3, 0, 1);
       // A gentle circulating current is spatially coherent, not independent per-fish jitter.
       fx += Math.cos(z * 0.075 + this.time * 0.09) * 0.13 - z * 0.008;
       fz += Math.sin(x * 0.08 + this.time * 0.08) * 0.13 + x * 0.008;
@@ -193,6 +187,36 @@ export class School {
           }
           const force = (clearance - Math.min(distance, clearance)) * 4 / Math.max(distance, 0.01);
           fx += dx * force; fy += (dy + 0.5) * force; fz += dz * force;
+        }
+      }
+      if (wallBlend > 0) {
+        // Safety blends last so obstacle lookahead cannot steer underneath the seabed.
+        // Rounded edges turn with the local heading, not a common circulation direction.
+        const horizontalBlend = clamp(wallHorizontal / 3, 0, 1);
+        const verticalBlend = clamp(wallY / 2, 0, 1);
+        fx *= 1 - wallBlend;
+        fz *= 1 - wallBlend;
+        if (horizontalBlend > 0) {
+          const nx = futureX / (innerX * innerX), nz = futureZ / (innerZ * innerZ);
+          const normalLength = Math.hypot(nx, nz);
+          const normalX = nx / normalLength, normalZ = nz / normalLength;
+          const outward = Math.max(0, ux * normalX + uz * normalZ);
+          const tangent = -ux * normalZ + uz * normalX;
+          const turn = Math.abs(tangent) > 0.05 ? Math.sign(tangent) : (Math.sin(x * 0.15 + z * 0.11) >= 0 ? 1 : -1);
+          const inward = 1.4 + outward * 1.2;
+          fx += (-normalX * inward - normalZ * turn * outward * 2.8) * horizontalBlend;
+          fz += (-normalZ * inward + normalX * turn * outward * 2.8) * horizontalBlend;
+        }
+        const middleY = (BOUNDS.minY + BOUNDS.maxY) * 0.5;
+        const verticalForce = clamp((middleY - futureY) * 0.9 - vy, -2.4, 2.4);
+        fy = fy * (1 - wallBlend) + verticalForce * verticalBlend;
+        if (verticalBlend > 0) {
+          const horizontalSpeed = Math.hypot(ux, uz);
+          const turnX = horizontalSpeed > 0.05 ? ux / horizontalSpeed : Math.cos(this.phases[i]);
+          const turnZ = horizontalSpeed > 0.05 ? uz / horizontalSpeed : Math.sin(this.phases[i]);
+          const verticalOutward = Math.max(0, uy * Math.sign(futureY - middleY));
+          fx += turnX * verticalOutward * 2.4 * verticalBlend;
+          fz += turnZ * verticalOutward * 2.4 * verticalBlend;
         }
       }
       const acceleration = Math.hypot(fx, fy, fz);
