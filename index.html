@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#062f3f" />
+    <meta name="description" content="A living underwater school. A local, interactive three-dimensional Boids simulation." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23073546'/%3E%3Cpath d='M12 32C23 12 42 17 49 28L60 20V44L49 36C36 50 21 46 12 32Z' fill='%2378d9ce'/%3E%3Ccircle cx='23' cy='29' r='3' fill='%23073546'/%3E%3C/svg%3E" />
+    <title>Pelagic — a living school</title>
+  </head>
+  <body>
+    <main id="ocean" aria-label="Interactive three-dimensional underwater fish school"></main>
+    <header class="masthead">
+      <div class="eyebrow"><span class="live-dot"></span> A LITTLE WORLD BELOW</div>
+      <h1>Pelagic<span>.</span></h1>
+      <p>A thousand small lives.<br />One quiet ocean.</p>
+    </header>
+    <aside class="controls" aria-label="School controls">
+      <div class="panel-heading"><span>THE LIVING SCHOOL</span><span class="depth">12 m ↓</span></div>
+      <div class="transport">
+        <button id="play" type="button" aria-label="Pause simulation" aria-pressed="false"><span id="play-icon">Ⅱ</span><span id="play-label">Pause</span></button>
+        <button id="reset" type="button" aria-label="Reset school">↻ <span>New school</span></button>
+      </div>
+      <label for="count"><span>Fish population</span><output id="count-value" for="count">850</output></label>
+      <input id="count" type="range" min="200" max="2000" step="50" value="850" />
+      <div class="range-ends"><span>200</span><span>2,000</span></div>
+      <label for="cohesion"><span>Togetherness</span><output id="cohesion-value" for="cohesion">Balanced</output></label>
+      <input id="cohesion" type="range" min="0.45" max="1.55" step="0.05" value="1" />
+      <label for="separation"><span>Personal space</span><output id="separation-value" for="separation">Balanced</output></label>
+      <input id="separation" type="range" min="0.65" max="1.6" step="0.05" value="1" />
+      <div class="panel-foot"><span class="live-dot"></span><span id="status" role="status">School in motion</span><span id="fps">— fps</span></div>
+    </aside>
+    <footer class="scene-footer"><span>DRAG TO EXPLORE <b>·</b> SCROLL TO DIVE</span><span>LOCAL NEIGHBORS. EMERGENT LIFE.</span></footer>
+    <div id="error" role="alert" hidden></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

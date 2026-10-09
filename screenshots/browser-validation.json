@@ -1,0 +1,198 @@
+{
+  "webgl": {
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Pro, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)"
+  },
+  "initial": {
+    "count": 850,
+    "paused": false,
+    "time": 1.9999999999999978,
+    "steps": 120,
+    "seed": 42,
+    "finite": true,
+    "minY": 7.386880874633789,
+    "maxY": 17.18248176574707,
+    "maxX": 17.100353240966797,
+    "maxZ": 11.166443824768066,
+    "minSpeed": 2.5893949241250334,
+    "maxSpeed": 3.7522362461921333,
+    "averageNeighbors": 37.11764705882353,
+    "maxCandidates": 160,
+    "maxTurn": 0.01420865904490153,
+    "cohesion": 1,
+    "separation": 1,
+    "fps": 60.00393468424159,
+    "simulationMs": 0.723094791048695,
+    "drawCalls": 14,
+    "triangles": 506214,
+    "firstPosition": [
+      -3.8040573596954346,
+      13.4389066696167,
+      1.7066152095794678
+    ],
+    "firstVelocity": [
+      3.305457353591919,
+      -0.14138711988925934,
+      0.6768724322319031
+    ],
+    "firstMatrix": [
+      0.7425915598869324,
+      -0.03176349774003029,
+      0.15206360816955566,
+      0,
+      0.03176349774003029,
+      0.7579942345619202,
+      0.0032173499930649996,
+      0,
+      -0.15206360816955566,
+      0.0032173499930649996,
+      0.7432636618614197,
+      0,
+      -3.8040573596954346,
+      13.4389066696167,
+      1.7066152095794678,
+      1
+    ],
+    "camera": [
+      24,
+      16.5,
+      34
+    ],
+    "droppedTime": 0.09993599999999997
+  },
+  "animated": {
+    "count": 850,
+    "paused": false,
+    "time": 6.249999999999983,
+    "steps": 375,
+    "seed": 42,
+    "finite": true,
+    "minY": 7.286627292633057,
+    "maxY": 18.240581512451172,
+    "maxX": 20.265830993652344,
+    "maxZ": 21.511154174804688,
+    "minSpeed": 2.6119492715534833,
+    "maxSpeed": 3.7498814283107005,
+    "averageNeighbors": 36.781176470588235,
+    "maxCandidates": 160,
+    "maxTurn": 0.014542682758967081,
+    "cohesion": 1,
+    "separation": 1,
+    "fps": 60,
+    "simulationMs": 0.7196287818209791,
+    "drawCalls": 14,
+    "triangles": 506214,
+    "firstPosition": [
+      10.095973014831543,
+      13.914475440979004,
+      5.0014214515686035
+    ],
+    "firstVelocity": [
+      3.130018472671509,
+      0.25503337383270264,
+      1.223554253578186
+    ],
+    "firstMatrix": [
+      0.7045712471008301,
+      0.05740834400057793,
+      0.27542364597320557,
+      0,
+      -0.05740834400057793,
+      0.7564139366149902,
+      -0.01080591231584549,
+      0,
+      -0.27542364597320557,
+      -0.01080591231584549,
+      0.7068235874176025,
+      0,
+      10.095973014831543,
+      13.914475440979004,
+      5.0014214515686035,
+      1
+    ],
+    "camera": [
+      24,
+      16.5,
+      34
+    ],
+    "droppedTime": 0.09993599999999997
+  },
+  "dense": {
+    "count": 2000,
+    "paused": false,
+    "time": 4.999999999999988,
+    "steps": 300,
+    "seed": 236,
+    "finite": true,
+    "minY": 6.657170295715332,
+    "maxY": 18.49875259399414,
+    "maxX": 21.07158851623535,
+    "maxZ": 21.38472557067871,
+    "minSpeed": 2.5931973482748356,
+    "maxSpeed": 3.76010369837407,
+    "averageNeighbors": 35.734,
+    "maxCandidates": 160,
+    "maxTurn": 0.014574982992808024,
+    "cohesion": 1.4,
+    "separation": 1.3,
+    "fps": 60.00393468424157,
+    "simulationMs": 1.736556466111674,
+    "drawCalls": 14,
+    "triangles": 1097314,
+    "firstPosition": [
+      3.8387293815612793,
+      17.509449005126953,
+      16.20015525817871
+    ],
+    "firstVelocity": [
+      -1.6442666053771973,
+      0.2773696184158325,
+      2.472142457962036
+    ],
+    "firstMatrix": [
+      -0.5207249522209167,
+      0.08784054219722748,
+      0.7829059958457947,
+      0,
+      -0.08784054219722748,
+      0.9261443018913269,
+      -0.16233594715595245,
+      0,
+      -0.7829059958457947,
+      -0.16233594715595245,
+      -0.5025111436843872,
+      0,
+      3.8387293815612793,
+      17.509449005126953,
+      16.20015525817871,
+      1
+    ],
+    "camera": [
+      7.596686090664466,
+      19.88031562291414,
+      37.71384517160604
+    ],
+    "droppedTime": 0.09993599999999997
+  },
+  "checks": [
+    "WebGL render",
+    "fish face velocity",
+    "animation progression",
+    "pause freezes full simulation",
+    "orbit and zoom while paused",
+    "2000 population change",
+    "behavior controls",
+    "reset preserves settings",
+    "resume",
+    "mobile layout",
+    "reduced-motion pause",
+    "zero browser errors",
+    "zero remote asset requests"
+  ],
+  "screenshots": [
+    "screenshots/pelagic.png",
+    "screenshots/pelagic-dense.png",
+    "screenshots/pelagic-mobile.png"
+  ]
+}

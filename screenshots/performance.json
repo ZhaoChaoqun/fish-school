@@ -1,0 +1,26 @@
+{
+  "viewport": "1512x982, DPR 1",
+  "renderer": "Headless Chrome, WebGL2 / ANGLE Metal, Apple M5 Pro (hardware; not SwiftShader)",
+  "samples": [
+    {
+      "count": 850,
+      "frames": 239,
+      "meanFrameMs": 16.66569037656904,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.700000000000728,
+      "measuredFps": 60.00351485024227,
+      "simulationMs": 0.7059662314769959,
+      "finite": true
+    },
+    {
+      "count": 2000,
+      "frames": 239,
+      "meanFrameMs": 16.66610878661088,
+      "medianFrameMs": 16.69999999999891,
+      "p95FrameMs": 16.799999999999272,
+      "measuredFps": 60.00200843542879,
+      "simulationMs": 1.4688650651732742,
+      "finite": true
+    }
+  ]
+}

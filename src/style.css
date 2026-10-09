@@ -1,0 +1,49 @@
+:root { font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif; color: #def5ef; background: #062f3f; font-synthesis: none; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+button, input { font: inherit; }
+#ocean { position: fixed; inset: 0; }
+canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 53% 45%, transparent 38%, #011f3040 100%); }
+.masthead { position: fixed; top: 44px; left: 48px; pointer-events: none; z-index: 1; }
+.eyebrow { display: flex; align-items: center; gap: 10px; color: #8ac8c5; font-size: 10px; font-weight: 600; letter-spacing: 3px; }
+.live-dot { display: inline-block; width: 5px; height: 5px; flex-shrink: 0; border-radius: 50%; background: #96dec5; box-shadow: 0 0 10px #82e9c640; }
+h1 { margin: 13px 0 10px; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 76px; letter-spacing: -4px; line-height: 1; }
+h1 span { color: #9ee4cd; }
+.masthead p { font-size: 13px; line-height: 1.8; color: #accbcc; letter-spacing: 0.4px; margin: 0; }
+.controls { position: fixed; right: 34px; bottom: 76px; width: 264px; padding: 22px; background: linear-gradient(145deg, #062d3ecc, #052434d9); border: 1px solid #b6efec25; border-radius: 18px; box-shadow: 0 16px 60px #00162330; backdrop-filter: blur(18px); z-index: 2; }
+.panel-heading { display: flex; justify-content: space-between; align-items: center; font-size: 9px; font-weight: 600; letter-spacing: 1.7px; color: #b2d9d6; }
+.depth { font-size: 10px; letter-spacing: 0.5px; color: #78aaa9; }
+.transport { display: flex; gap: 8px; margin: 19px 0 24px; }
+button { display: flex; justify-content: center; align-items: center; gap: 9px; padding: 10px 12px; font-size: 11px; border: 1px solid #b4e7df24; background: #c5efea0b; border-radius: 8px; color: #d2eae4; cursor: pointer; transition: background 150ms, border-color 150ms; }
+button:hover { background: #c5efea20; border-color: #b4e7df60; }
+button:focus-visible, input:focus-visible { outline: 2px solid #a5e8ce; outline-offset: 5px; }
+#play { flex: 1; background: #a0e3c5; color: #123b3d; border-color: #a0e3c5; }
+#play:hover { background: #c5f4df; }
+#reset { flex: 1.25; }
+#play-icon { font-size: 14px; }
+label { display: flex; justify-content: space-between; align-items: center; margin: 19px 0 12px; font-size: 11px; color: #c4ddd9; }
+output { font-size: 10px; color: #9bdac8; font-variant-numeric: tabular-nums; }
+input[type="range"] { display: block; appearance: none; width: 100%; height: 3px; margin: 0; background: linear-gradient(to right, #91d3bd 0%, #91d3bd var(--fill, 36%), #739ea738 var(--fill, 36%), #739ea738 100%); border-radius: 3px; cursor: pointer; }
+input[type="range"]::-webkit-slider-thumb { appearance: none; height: 10px; width: 10px; background: #c5ecdf; border-radius: 50%; box-shadow: 0 0 0 4px #a5e8ce10; }
+input[type="range"]::-moz-range-thumb { height: 10px; width: 10px; border: 0; background: #c5ecdf; border-radius: 50%; }
+.range-ends { display: flex; justify-content: space-between; font-size: 9px; color: #779b9e; margin-top: 9px; }
+.panel-foot { display: flex; align-items: center; gap: 7px; margin-top: 23px; padding-top: 15px; border-top: 1px solid #aedcd817; font-size: 9px; color: #8eb8b5; }
+#fps { margin-left: auto; font-variant-numeric: tabular-nums; color: #779b9e; }
+.scene-footer { position: fixed; bottom: 28px; left: 48px; right: 35px; display: flex; justify-content: space-between; gap: 20px; font-size: 9px; letter-spacing: 2px; color: #8fb4b8; z-index: 1; pointer-events: none; }
+.scene-footer b { margin: 0 8px; font-weight: normal; color: #c5decf; }
+#error { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 18px 24px; max-width: 600px; background: #532f35; color: white; border-radius: 10px; z-index: 10; }
+@media (max-width: 700px) {
+  .masthead { top: 25px; left: 25px; }
+  .eyebrow { font-size: 8px; letter-spacing: 2px; }
+  h1 { font-size: 56px; }
+  .masthead p { font-size: 11px; }
+  .controls { width: 228px; right: 18px; bottom: 55px; padding: 17px; }
+  .transport { margin: 15px 0 18px; }
+  label { margin-top: 15px; }
+  .scene-footer { left: 25px; bottom: 21px; font-size: 8px; letter-spacing: 1px; }
+  .scene-footer span:last-child { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  button { transition: none; }
+}
